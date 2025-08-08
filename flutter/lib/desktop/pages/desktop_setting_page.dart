@@ -57,7 +57,7 @@ enum SettingsTabKey {
   plugin,
   account,
   printer,
-  about,
+ // about,
 }
 
 class DesktopSettingPage extends StatefulWidget {
@@ -79,7 +79,7 @@ class DesktopSettingPage extends StatefulWidget {
     if (isWindows &&
         bind.mainGetBuildinOption(key: kOptionHideRemotePrinterSetting) != 'Y')
       SettingsTabKey.printer,
-    SettingsTabKey.about,
+    //SettingsTabKey.about,
   ];
 
   DesktopSettingPage({Key? key, required this.initialTabkey}) : super(key: key);
@@ -207,10 +207,10 @@ class _DesktopSettingPageState extends State<DesktopSettingPage>
           settingTabs
               .add(_TabInfo(tab, 'Printer', Icons.print_outlined, Icons.print));
           break;
-        case SettingsTabKey.about:
-          settingTabs
-              .add(_TabInfo(tab, 'About', Icons.info_outline, Icons.info));
-          break;
+        //case SettingsTabKey.about:
+         // settingTabs
+             // .add(_TabInfo(tab, 'About', Icons.info_outline, Icons.info));
+        //  break;
       }
     }
     return settingTabs;
@@ -241,9 +241,9 @@ class _DesktopSettingPageState extends State<DesktopSettingPage>
         case SettingsTabKey.printer:
           children.add(const _Printer());
           break;
-        case SettingsTabKey.about:
-          children.add(const _About());
-          break;
+       // case SettingsTabKey.about:
+         // children.add(const _About());
+        //  break;
       }
     }
     return children;
