@@ -1,11 +1,11 @@
 [package]
-name = "rustdesk"
+name = "SysSBL"
 version = "1.4.1"
-authors = ["rustdesk <info@rustdesk.com>"]
+authors = ["Sys"]
 edition = "2021"
 build= "build.rs"
-description = "RustDesk Remote Desktop"
-default-run = "rustdesk"
+description = "SysSBL Remote Desktop"
+default-run = "SysSBL"
 rust-version = "1.75"
 
 [lib]
