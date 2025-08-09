@@ -1,4 +1,5 @@
-use crate::{common::do_check_software_update, hbbs_http::create_http_client};
+//use crate::{common::do_check_software_update, hbbs_http::create_http_client};
+use crate::{hbbs_http::create_http_client};
 use hbb_common::{bail, config, log, ResultType};
 use std::{
     io::{self, Write},
@@ -122,10 +123,10 @@ fn check_update(manually: bool) -> ResultType<()> {
     if !(manually || config::Config::get_bool_option(config::keys::OPTION_ALLOW_AUTO_UPDATE)) {
         return Ok(());
     }
-    if !do_check_software_update().is_ok() {
+    //if !do_check_software_update().is_ok() {
         // ignore
-        return Ok(());
-    }
+        //return Ok(());
+    //}
 
     let update_url = crate::common::SOFTWARE_UPDATE_URL.lock().unwrap().clone();
     if update_url.is_empty() {
