@@ -185,13 +185,13 @@ impl PrivacyModeImpl {
             return Ok(());
         }
 
-        log::info!("Start privacy mode window broker, check_update_broker_process");
-        if let Err(e) = crate::platform::windows::check_update_broker_process() {
-            log::warn!(
-                "Failed to check update broker process. Privacy mode may not work properly. {}",
-                e
-            );
-        }
+        //log::info!("Start privacy mode window broker, check_update_broker_process");
+        //if let Err(e) = crate::platform::windows::check_update_broker_process() {
+            //log::warn!(
+                //"Failed to check update broker process. Privacy mode may not work properly. {}",
+                //e
+            //);
+        //}
 
         let exe_file = std::env::current_exe()?;
         let Some(cur_dir) = exe_file.parent() else {
