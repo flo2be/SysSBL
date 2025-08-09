@@ -1203,7 +1203,7 @@ fn get_default_install_path() -> String {
     format!("{}\\{}", pf, crate::get_app_name())
 }
 
-pub fn check_update_broker_process() -> ResultType<()> {
+/* pub fn check_update_broker_process() -> ResultType<()> {
     let process_exe = win_topmost_window::INJECTED_PROCESS_EXE;
     let origin_process_exe = win_topmost_window::ORIGIN_PROCESS_EXE;
 
@@ -1246,7 +1246,7 @@ pub fn check_update_broker_process() -> ResultType<()> {
     run_cmds(cmds, false, "update_broker")?;
 
     Ok(())
-}
+}*/
 
 fn get_install_info_with_subkey(subkey: String) -> (String, String, String, String) {
     let mut path = get_reg_of(&subkey, "InstallLocation");
