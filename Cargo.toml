@@ -1,10 +1,10 @@
 [package]
 name = "SysSBL"
-version = "1.4.1"
-authors = ["Sys"]
+version = "1.0.0"
+authors = ["Sys <it@sanggabumilestari.org>"]
 edition = "2021"
 build= "build.rs"
-description = "SysSBL Remote Desktop"
+description = "Sangga Remote Desktop"
 default-run = "SysSBL"
 rust-version = "1.75"
 
